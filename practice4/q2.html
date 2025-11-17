@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setUpCounter()">
+    <!-- // Part a -->
+    <p>Page loaded <span id="loadCount">0</span> times.</p>
+    <!-- part b -->
+    <input type="button" value="Stop Counter" onclick="stopCounter()">
+    <script>
+        let count = 0;
+        let intervalId;
+        function setUpCounter() {
+            intervalId = setInterval(()=> {
+                document.getElementById('loadCount').textContent = count;
+                count++;
+            }, 1000);
+        }
+        // part b
+        function stopCounter() {   
+            clearInterval(intervalId);
+            setTimeout(()=> {
+                setUpCounter();
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

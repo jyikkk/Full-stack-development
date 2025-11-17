@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Apple MacBook Pro</h1>
+    <p>System configuration and Price</p>
+    <br>
+    <p>Screen Size:</p> 
+    <input type="radio" id="size" checked disabled> 13.3"</input>
+    <p>CPU:</p>
+    
+    <fieldset>
+        <legend>CPU:</legend>
+        <input type="radio" name="MacBook" checked>
+        <label for="Intel i5 2.3GHz">Intel i5 2.3GHz</label><br>
+        <input type="radio" name="MacBook">
+        <label for="Intel i5 2.7GHz">Intel i5 2.7GHz (+$150)</label><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>RAM:</legend>
+        <input type="radio" name="RAM" checked>
+        <label for = "8GB">8GB</label><br>
+        <input type="radio" name="RAM">
+        <label for="16GB">16GB(+$150)</label>
+    </fieldset>
+
+    <input type="button" onclick="updatePrice()" value="Check price">
+
+    <p id="output"></p>
+
+    
+    <script>
+        let basePrice = 1340;
+        function updatePrice() {
+            let totalPrice = basePrice;
+            // Check CPU selection
+            const cpuRadios = document.querySelectorAll('input[name="MacBook"]');
+            cpuRadios.forEach(radio => {
+                if (radio.checked && radio.nextElementSibling.textContent.includes('2.7GHz')) {
+                    totalPrice += 150;
+                }
+            });
+            // Check RAM selection
+            const ramRadios = document.querySelectorAll('input[name="RAM"]');
+            ramRadios.forEach(radio => {
+                if (radio.checked && radio.nextElementSibling.textContent.includes('16GB')) {
+                    totalPrice += 150;
+                }
+            });
+            document.getElementById("output").innerText = "Price: $" + totalPrice;
+        }
+    </script>
+</body>
+</html>

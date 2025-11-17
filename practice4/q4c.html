@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and Drop</title>
+    <style>
+        .dropBox {
+            border: 1px solid;
+            height: 200px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>What are the languages we use in full stack development?</h1>
+    <ol class="dropBox" type ="1" ondrop="handleDrop(event)" ondragover="handleDragOver(event)"></ol><br><br>
+    <h1>Drag the texts below into the box above</h1>
+    <p id="dragText" draggable="true"  ondragstart="handleStartDrag(event)">
+        Javascript
+    </p>
+    <p id="dragText1" draggable="true" ondragstart="handleStartDrag(event)">
+        CSS
+    </p>
+    <p id="dragText2" draggable="true" ondragstart="handleStartDrag(event)">
+        HTML
+    </p>
+    <p id="dragText3" draggable="true" ondragstart="handleStartDrag(event)">
+        Python
+    </p>
+    <p id="dragText4" draggable="true" ondragstart="handleStartDrag(event)">
+        Java
+    </p>
+    <p id="dragText5" draggable="true" ondragstart="handleStartDrag(event)">
+        C++
+    </p>
+    <p id="dragText6" draggable="true" ondragstart="handleStartDrag(event)">
+        React
+    </p>
+
+    <script>
+        // part a
+        function handleDrop(e){
+            e.preventDefault();
+            const data = e.dataTransfer.getData("text");
+
+            const item = document.getElementById(data);
+
+            const newLi = document.createElement("li");
+            newLi.innerText = item.innerText;
+            
+            e.target.appendChild(newLi);
+            item.remove();
+        }
+
+        function handleDragOver(e){
+            e.preventDefault();
+        }
+
+        function handleStartDrag(e){
+            e.dataTransfer.setData("text", e.target.id);
+        }
+    </script>
+</body>

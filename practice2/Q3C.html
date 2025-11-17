@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question3</title>
+
+     <style>
+        .image 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        p
+        {
+            margin-top: 2em;
+            margin-bottom: 2em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .image img {
+            width: 300px;
+        }
+        p:first-of-type:first-line{
+            font-size: 2.5em;
+        }
+        #name{
+            font-family: "brush script MT",cursive;
+            font-size: 1.5em;
+        }
+        #terms{
+            font-family: cursive;
+            font-weight: bold;
+            letter-spacing: 0.5ch;
+        }
+        #name::before
+        {
+            content: "\1F60E";
+        }
+        #name::after
+        {
+            content: "\1F60E";
+        }
+        #book::after
+        {
+            content: "\1F4DA";
+        }
+        #book::before
+        {
+            content: "\1F4DA";
+        }
+
+        </style>
+</head>
+<body>
+        
+    <div class="image">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Ken_Thompson_and_Dennis_Ritchie--1973.jpg" alt="Ritchie & Thompson">
+    </div>
+    </body>
+    <p>
+       C, computer programming language developed in the early 1970s</p> <p>by American
+        computer scientist <span id="name">Dennis M. Ritchie</span> at Bell Laboratories (formerly <span id="terms">AT&T</span> Bell
+        Laboratories). C was designed as a minimalist language to be used in writing
+        operating systems for minicomputers, such as the <span id="terms">DEC PDP 7</span> , which had very
+        limited memories compared with the mainframe computers of the period. The
+        language was devised during 1969–73, alongside the early development of the <span id="terms">UNIX</span> 
+        operating system. It was based on <span id="terms">CPL</span> (Combined Programming Language), which
+        had been first condensed into the B programming language—a stripped-down
+        computer programming language—created in 1969–70 by<span id="name">Ken Thompson</span> , an
+        American computer scientist and a colleague of Ritchie. Ritchie subsequently
+        rewrote and restored features from <span id="terms"> CPL </span>to create C and eventually rewrote the <span id="terms">UNIX</span>
+        operating system in the new language.</p>
+   
+
+    <div class="image"><img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Pdp7-oslo-2005.jpeg" alt="PDP 7"></div>
+
+    <p>
+        As the <span id="terms">UNIX</span> system was enhanced, a series of changes took place in C between
+1977 and 1979. During this time a description of the language became widely
+available through a book, The <span id="book">C Programming Language (1978)</span> , by <span id="name">Brian W.
+Kernighan and Ritchie</span>. In the mid-1980s it became important to establish an official
+standard for C, since it was being used in projects subject to commercial and
+government contracts. In 1983 the American National Standards Institute (<span id="terms">ANSI</span>) set
+up a committee that further amended and standardized the language. Since then C
+has been referred to as <span id="terms">ANSI</span> Standard C, and it remains popular in the world of
+UNIX-like operating systems. C also became one of the most common programming
+languages used for writing other system software and applications. Descendants of
+C include Concurrent C, Objective C, C*, C#, and the widely used C++. The
+programming language Java was introduced in 1994 as a simplified subset of C for
+deployment over the Internet and for use in portable devices with limited memory or
+limited processing capabilities.
+    </p>
+
+</body>
+</html>

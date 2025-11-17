@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Your Order</h1>
+    <form>
+        Username: <input type=”text” name=”username” />
+        <input type="submit" value="submit"/>
+    </form>
+    <form>
+        Email: <input type=”text” name=”email” />
+        <input type="submit" value="submit"/>
+    </form>
+
+    <fieldset>
+        <legend>Select a product:</legend>
+        <input type="radio" name="MacBook">
+        <label for="MacBook Pro 13.3">MacBook Pro 13.3</label><br>
+        <input type="radio" name="MacBook">
+        <label for="MacBook Pro 15.4">MacBook Pro 15.4</label><br>
+        <input type="radio" name="MacBook">
+        <label for="MacBook Air 13.3">MacBook Air 13.3</label><br>
+        <input type="radio" name="MacBook">
+        <label for="MacBook Pro 12">MacBook Pro 12"</label><br>
+    </fieldset>
+
+    <form>
+        Date of delivery: <input type="date" name="deliverydate"/>
+        <br>
+        Payment Type:
+        <select name="paymenttype" id="paymenttype">
+            <option value="creditcard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="banktransfer">Bank Transfer</option>
+        </select>
+        <br>
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms"> I agree to the terms and conditions</label><br>
+        <input type="checkbox" id="terms" name="terms">
+        <label for="terms"> I agree to recieve promotional emails</label><br>
+        <br>
+        <input type="submit" value="Click to proceed"/> <input type="reset" value="Reset Form"/>
+    </form>
+    
+
+
+
+</body>
+</html>
