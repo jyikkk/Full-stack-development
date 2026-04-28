@@ -92,3 +92,4 @@ Special thanks to my lecturers, classmates, and the FSD teaching team for guidin
 If you're interested in connecting or discussing this module:
 
 **GitHub:** https://github.com/jyikkk  
+&& https://github.com/jyiks (personal account)
